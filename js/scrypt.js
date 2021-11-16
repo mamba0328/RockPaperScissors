@@ -1,8 +1,4 @@
-/* 1.Human should choose r p or s; 
-2. Computer makes a randome decision; 
-3. They are comparing; */ 
 
-//1. 
 function computerPlay() {
     const rockPaperScissors = ["rock","paper","scissors"]
     
@@ -12,21 +8,42 @@ function computerPlay() {
 
     }
 
-
-
-//3. 
-function game() {
-    computerSelection=computerPlay(); 
-
-    console.log(computerSelection);
     
-    let playerSelection = (prompt("rock, paper or scissors?"));
-    if (playerSelection.toLowerCase===computerSelection.toLowerCase) { 
-        console.log("it's a toe")
+    
+    
+    
+function playRound() {
+    let computerSelection=computerPlay();
+    console.log(computerSelection)
+
+    let playerSelection = prompt("rock, paper or scissors?").toLowerCase();
+
+    
+    if (playerSelection != "rock"&&playerSelection != "paper"&&playerSelection != "scissors"){
+        console.log("Are you dumbass?")
+    } else {
+    
+    if (playerSelection===computerSelection) { 
+        return "it's a toe";
+    } else if (playerSelection=="rock"&&computerSelection=="scissors") {
+        return "You win, rock beats scissors";
+    } else if(playerSelection=="scissors"&&computerSelection=="paper") { 
+        return "You win, scissors beats paper";
+    } else if (playerSelection=="paper"&&computerSelection=="rock") { 
+        return "You win, paper beats rock";
     } else { 
-        console.log("It's not a toe")
+        return "You lose, " + computerSelection + " beats " + playerSelection ;
     }
-   
+}
+}
+
+function game() { 
+    console.log(playRound());
+    console.log(playRound());
+    console.log(playRound());
+    console.log(playRound());
+    console.log(playRound());
 }
 
 game();
+
