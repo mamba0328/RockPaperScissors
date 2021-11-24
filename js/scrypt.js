@@ -1,11 +1,8 @@
 
 function computerPlay() {
     const rockPaperScissors = ["rock","paper","scissors"]
-    
     let randomValue= rockPaperScissors[Math.floor(Math.random()* rockPaperScissors.length)]
-    
     return randomValue;
-
     }
 
     
