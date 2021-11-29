@@ -1,0 +1,41 @@
+* { 
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
+}
+
+
+#container { 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#result { 
+    margin-top: 2em;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#chooses { 
+  display: flex;
+  justify-content: space-around;
+  margin-left: 18%;
+  font-size: 24px;
+}
+
+.options { 
+    text-align: center;
+    font-size: 24px;
+}
+
+#scoreboard{ 
+    display: flex;
+    justify-content: space-around;
+    margin : auto auto 6% auto;
+    font-size: 10em;
+    font-weight: bold;
+}
+
+button { 
+    font-size: larger;
+}
